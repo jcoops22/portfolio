@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Mansalva", cursive;
+}
+a {
+  color: #fff;
+}
+.active {
+  border-bottom: 3px solid moccasin;
+}
+body {
+  position: relative;
+}
+nav {
+  opacity: 0;
+  height: 0;
+  width: 100%;
+  position: relative;
+  transition-duration: 0.3s;
+  background-color: crimson;
+}
+.scrollNav {
+  background-color: moccasin;
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  z-index: 2;
+  font-size: 22px;
+}
+nav div {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+}
+nav div li {
+  padding: 5px 20px;
+  margin: 3px 5px;
+  font-size: 26px;
+}
+nav div li a {
+  transition-duration: 0.2s;
+  padding-left: 8px;
+}
+nav div h4 {
+  margin-right: 10%;
+  transition-duration: 0.3s;
+}
+.container {
+  height: 140vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.imageDiv {
+  width: 100%;
+  text-align: center;
+}
+#pic {
+  opacity: 0;
+  position: relative;
+  top: 30vh;
+  animation-name: jiggle;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 4800ms;
+}
+@keyframes jiggle {
+  0% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+#homeParagraph {
+  font-size: 24px;
+  width: 60%;
+  position: relative;
+  top: 50vh;
+  margin: 30px 0 30px 20%;
+  line-height: 2;
+  font-family: "Oxygen", sans-serif;
+}
+.box {
+  position: absolute;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  font-size: 60px;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.7;
+}
+.box1 {
+  background-color: blue;
+}
+.box2 {
+  background-color: red;
+}
+.box3 {
+  background-color: orange;
+}
+.box4 {
+  background-color: purple;
+}
+.box5 {
+  background-color: green;
+}
+.box6 {
+  background-color: teal;
+}
+.box7 {
+  background-color: yellow;
+}
+.box8 {
+  background-color: magenta;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: moccasin;
+}
+footer ul {
+  width: 100%;
+  display: column;
+  justify-content: center;
+}
