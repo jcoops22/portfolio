@@ -4,15 +4,35 @@
   list-style: none;
   text-decoration: none;
   font-family: "Mansalva", cursive;
+  box-sizing: border-box;
 }
 a {
-  color: #fff;
+  color: crimson;
 }
 .active {
   border-bottom: 3px solid moccasin;
 }
+.show {
+  display: initial;
+}
+.hide {
+  display: none;
+}
+.flex {
+  flex-direction: column;
+  height: 55vh;
+  position: relative;
+  top: 8vh;
+  background-color: crimson;
+  z-index: 4;
+  overflow: scroll;
+}
+html {
+  overflow: hidden;
+}
 body {
   position: relative;
+  overflow: hidden;
 }
 nav {
   opacity: 0;
@@ -21,6 +41,10 @@ nav {
   position: relative;
   transition-duration: 0.3s;
   background-color: crimson;
+}
+#burger {
+  display: none;
+  transition-duration: 0.5s;
 }
 .scrollNav {
   background-color: moccasin;
@@ -37,23 +61,69 @@ nav div {
   overflow: hidden;
   align-items: center;
 }
+nav div h4 a {
+  color: moccasin;
+}
 nav div li {
-  padding: 5px 20px;
+  padding: 15px 20px;
   margin: 3px 5px;
   font-size: 26px;
 }
 nav div li a {
   transition-duration: 0.2s;
   padding-left: 8px;
+  color: moccasin;
+}
+nav div li a:hover {
+  animation-name: jiggle;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
 }
 nav div h4 {
   margin-right: 10%;
   transition-duration: 0.3s;
 }
 .container {
-  height: 140vh;
+  height: 200vh;
   width: 100vw;
   overflow: hidden;
+}
+.expandLeft,
+.expandRight {
+  position: absolute;
+  top: 57vh;
+  opacity: 0;
+  height: 20vh;
+  width: 50%;
+  transition-duration: 0.5s;
+  background-color: crimson;
+}
+.expandLeft {
+  /* height: 100px; */
+  width: 30%;
+  left: 30vw;
+}
+.expandRight {
+  /* height: 100px; */
+  width: 30%;
+  left: 60vw;
+}
+.scrolledbgRight {
+  background: rgb(255, 228, 181);
+  background: linear-gradient(
+    to right,
+    rgba(255, 228, 181, 1) 65%,
+    rgba(255, 255, 255, 1) 93%
+  );
+}
+.scrolledbgLeft {
+  background: rgb(255, 228, 181);
+  background: linear-gradient(
+    to left,
+    rgba(255, 228, 181, 1) 65%,
+    rgba(255, 255, 255, 1) 93%
+  );
 }
 .imageDiv {
   width: 100%;
@@ -62,11 +132,14 @@ nav div h4 {
 #pic {
   opacity: 0;
   position: relative;
-  top: 30vh;
+  top: 25vh;
   animation-name: jiggle;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   animation-delay: 4800ms;
+  border: 15px solid crimson;
+  border-radius: 50%;
+  transition-duration: 0.2s;
 }
 @keyframes jiggle {
   0% {
@@ -85,14 +158,29 @@ nav div h4 {
     transform: rotate(-2deg);
   }
 }
-#homeParagraph {
-  font-size: 24px;
+#paraDiv {
   width: 60%;
   position: relative;
-  top: 50vh;
+  top: 55vh;
+  opacity: 0;
   margin: 30px 0 30px 20%;
+}
+#homeH2 {
+  color: crimson;
+  font-size: 64px;
+  margin-bottom: 80px;
+}
+#homeParagraph {
+  font-size: 24px;
   line-height: 2;
   font-family: "Oxygen", sans-serif;
+  transition-duration: 0.3s;
+}
+#homeParagraph a {
+  animation-name: jiggle;
+}
+#homeParagraph a:hover {
+  animation-play-state: running;
 }
 .box {
   position: absolute;
@@ -138,4 +226,20 @@ footer ul {
   width: 100%;
   display: column;
   justify-content: center;
+}
+
+@media only screen and (max-width: 839px) {
+  nav div li {
+    display: none;
+  }
+  #burger {
+    cursor: pointer;
+    display: initial;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .container {
+    height: 250vh;
+  }
 }
