@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Mansalva", cursive;
+  box-sizing: border-box;
+}
+a {
+  color: crimson;
+}
+.active {
+  border-bottom: 3px solid moccasin;
+}
+body {
+  height: 100%;
+}
+nav {
+  height: 80px;
+  width: 100%;
+  position: relative;
+  background-color: crimson;
+}
+#burger {
+  display: none;
+  transition-duration: 1.5s;
+}
+.scrollNav {
+  background-color: moccasin;
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  z-index: 2;
+  font-size: 22px;
+}
+nav div {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+}
+nav div h4 a {
+  color: moccasin;
+}
+nav div li {
+  padding: 15px 10px;
+  margin: 3px 5px;
+  font-size: 26px;
+}
+nav div li a {
+  transition-duration: 0.2s;
+  padding-left: 8px;
+  margin: 8px;
+  color: moccasin;
+}
+nav div li a:hover {
+  animation-name: jiggle;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+}
+nav div h4 {
+  margin-right: 10%;
+  transition-duration: 0.3s;
+}
+#headerDiv {
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+}
+#frame {
+  height: 300px;
+  border: 10px solid black;
+  border-radius: 50%;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#frame h1 {
+  text-align: center;
+}
+.container {
+  height: 100vh;
+  border: 1px solid black;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: moccasin;
+}
+footer ul {
+  width: 100%;
+  display: column;
+  justify-content: center;
+}

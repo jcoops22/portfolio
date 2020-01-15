@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Mansalva", cursive;
+  box-sizing: border-box;
+}
+a {
+  color: crimson;
+}
+.active {
+  border-bottom: 3px solid moccasin;
+}
+.show {
+  display: initial;
+}
+.hide {
+  display: none;
+}
+.flex {
+  flex-direction: column;
+  height: 55vh;
+  position: relative;
+  top: 8vh;
+  background-color: crimson;
+  z-index: 4;
+  overflow: scroll;
+}
+
+body {
+  height: 100%;
+}
+nav {
+  opacity: 1;
+  height: 80px;
+  width: 100%;
+  position: relative;
+  transition-duration: 0.3s;
+  background-color: crimson;
+}
+#burger {
+  display: none;
+  transition-duration: 1.5s;
+}
+.scrollNav {
+  background-color: moccasin;
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  z-index: 2;
+  font-size: 22px;
+}
+nav div {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+}
+nav div h4 a {
+  color: moccasin;
+}
+nav div li {
+  padding: 15px 10px;
+  margin: 3px 5px;
+  font-size: 26px;
+}
+nav div li a {
+  transition-duration: 0.2s;
+  padding-left: 8px;
+  margin: 8px;
+  color: moccasin;
+}
+nav div li a:hover {
+  animation-name: jiggle;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+}
+nav div h4 {
+  margin-right: 10%;
+  transition-duration: 0.3s;
+}
+#intro {
+  height: 68vh;
+  padding-top: 6%;
+  margin-bottom: 8%;
+  background-color: moccasin;
+}
+#intro h1 {
+  margin-left: 20%;
+  font-size: 60px;
+  color: crimson;
+  padding-top: 10vh;
+}
+section:nth-last-of-type(even) {
+  background-color: rgba(255, 228, 181, 0.5);
+}
+section h2 {
+  color: crimson;
+  margin: 3%;
+  font-size: 35px;
+}
+section p {
+  font-family: "Oxygen", sans-serif;
+  font-size: 23px;
+  width: 60%;
+  margin: 7%;
+}
+#drummingSection {
+  margin-bottom: 19%;
+}
+#drummingSection img {
+  margin: 3%;
+  width: 80%;
+  max-width: 600px;
+}
+#codingSection {
+  display: flex;
+  justify-content: center;
+  padding: 15% 0;
+}
+#codingSection div:nth-of-type(1) {
+  flex-basis: 70%;
+}
+#codingSection h2 {
+  text-align: center;
+}
+#codingSection div p {
+  margin: 10% 7%;
+  padding: 0;
+  line-height: 1.4;
+}
+#carosel {
+  width: 40%;
+  border: 1px solid black;
+  margin-right: 15px;
+}
+#gamingSection {
+  padding: 8% 5% 22%;
+}
+.gamesList {
+  height: 14vh;
+  border: 1px solid black;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: moccasin;
+}
+footer ul {
+  width: 100%;
+  display: column;
+  justify-content: center;
+}

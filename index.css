@@ -44,7 +44,7 @@ nav {
 }
 #burger {
   display: none;
-  transition-duration: 0.5s;
+  transition-duration: 1.5s;
 }
 .scrollNav {
   background-color: moccasin;
@@ -65,13 +65,14 @@ nav div h4 a {
   color: moccasin;
 }
 nav div li {
-  padding: 15px 20px;
+  padding: 15px 10px;
   margin: 3px 5px;
   font-size: 26px;
 }
 nav div li a {
   transition-duration: 0.2s;
   padding-left: 8px;
+  margin: 8px;
   color: moccasin;
 }
 nav div li a:hover {
@@ -94,18 +95,16 @@ nav div h4 {
   position: absolute;
   top: 57vh;
   opacity: 0;
-  height: 20vh;
+  height: 25vh;
   width: 50%;
   transition-duration: 0.5s;
   background-color: crimson;
 }
 .expandLeft {
-  /* height: 100px; */
   width: 30%;
   left: 30vw;
 }
 .expandRight {
-  /* height: 100px; */
   width: 30%;
   left: 60vw;
 }
@@ -136,7 +135,7 @@ nav div h4 {
   animation-name: jiggle;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
-  animation-delay: 4800ms;
+  animation-delay: 3000ms;
   border: 15px solid crimson;
   border-radius: 50%;
   transition-duration: 0.2s;

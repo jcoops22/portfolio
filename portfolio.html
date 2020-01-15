@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html id="homeHTML" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lacquer|Mansalva&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="portfolio.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Oxygen&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lacquer|Mansalva&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
   </head>
-  <body id="homeBody">
+  <body>
     <nav>
       <div>
         <h4 id="navh4"><a href="./about.html">Jonathan Cooper</a></h4>
-        <li><a href="./index.html" class="active">home</a></li>
+        <li><a href="./index.html">home</a></li>
         <li><a href="./about.html">about me</a></li>
         <li><a href="./resume.pdf" download>resume</a></li>
-        <li><a href="./portfolio.html">portfolio</a></li>
+        <li><a href="./portfolio.html" class="active">portfolio</a></li>
         <img
           id="burger"
           src="./resources/burger.svg"
@@ -31,37 +31,12 @@
         />
       </div>
     </nav>
-    <div class="container">
-      <div class="box box8"></div>
-      <div class="box box7"></div>
-      <div class="box box6"></div>
-      <div class="box box5"></div>
-      <div class="box box4"></div>
-      <div class="box box3"></div>
-      <div class="box box2"></div>
-      <div class="box box1"></div>
-      <div class="content">
-        <div class="imageDiv">
-          <div class="expandLeft"></div>
-          <div class="expandRight"></div>
-          <img
-            id="pic"
-            src="./resources/me.jpg"
-            alt="picture of me"
-            width="300"
-          />
-        </div>
-
-        <div id="paraDiv">
-          <h2 id="homeH2">Hello!</h2>
-          <p id="homeParagraph">
-            Please check out the rest of my site to learn more
-            <a href="">about me</a>, download a copy of my
-            <a href="">resume</a> and check out my <a href="">portfolio</a>.
-          </p>
-        </div>
+    <div id="headerDiv">
+      <div id="frame">
+        <h1>Portfolio</h1>
       </div>
     </div>
+    <div class="container"></div>
     <footer>
       <ul>
         <li>
@@ -106,6 +81,6 @@
         </li>
       </ul>
     </footer>
-    <script src="./index.js"></script>
+    <script src="./portfolio.js"></script>
   </body>
 </html>

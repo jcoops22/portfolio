@@ -7,8 +7,8 @@ const box5 = document.getElementsByClassName("box5");
 const box6 = document.getElementsByClassName("box6");
 const box7 = document.getElementsByClassName("box7");
 const box8 = document.getElementsByClassName("box8");
-const body = document.getElementsByTagName("body")[0];
-const html = document.getElementsByTagName("html")[0];
+const home_body = document.getElementById("homeBody");
+const home_html = document.getElementById("homeHTML");
 const nav = document.getElementsByTagName("nav");
 const navh4 = document.getElementById("navh4");
 const navh4Link = document.querySelector("#navh4 a");
@@ -22,13 +22,14 @@ const burger = document.querySelector("#burger");
 const paraDiv = document.getElementById("paraDiv");
 const expandLeft = document.getElementsByClassName("expandLeft")[0];
 const expandRight = document.getElementsByClassName("expandRight")[0];
+var burgerFlag = true;
 var scrolled = false;
 
 function loadPic() {
   setTimeout(() => {
     pic.style.opacity = 1;
-    body.style.overflow = "auto";
-    html.style.overflow = "auto";
+    home_body.style.overflow = "auto";
+    home_html.style.overflow = "auto";
     setTimeout(() => {
       nav[0].style.opacity = 1;
       nav[0].style.height = "80px";
@@ -42,7 +43,7 @@ function loadPic() {
       expandRight.style.left = "50%";
       expandRight.style.width = "50%";
     }, 1000);
-  }, 4800);
+  }, 3000);
 }
 
 function grow(box) {
@@ -67,36 +68,36 @@ function shrink(box) {
 window.onload = function timingScheme() {
   setTimeout(() => {
     grow(box1);
-    console.log("first box");
+    // console.log("first box");
   }, 0);
   setTimeout(() => {
     shrink(box2);
-    console.log("second box");
-  }, 500);
+    // console.log("second box");
+  }, 300);
   setTimeout(() => {
     grow(box3);
-    console.log("third box");
-  }, 1000);
+    // console.log("third box");
+  }, 600);
   setTimeout(() => {
     shrink(box4);
-    console.log("fourth box");
-  }, 1500);
+    // console.log("fourth box");
+  }, 900);
   setTimeout(() => {
     grow(box5);
-    console.log("fifth box");
-  }, 2000);
+    // console.log("fifth box");
+  }, 1200);
   setTimeout(() => {
     shrink(box6);
-    console.log("sixth box");
-  }, 2500);
+    // console.log("sixth box");
+  }, 1500);
   setTimeout(() => {
     grow(box7);
-    console.log("seventh box");
-  }, 3000);
+    // console.log("seventh box");
+  }, 1800);
   setTimeout(() => {
     shrink(box8);
-    console.log("eighth box");
-  }, 3500);
+    // console.log("eighth box");
+  }, 2100);
   loadPic();
 };
 
@@ -188,13 +189,17 @@ window.addEventListener("resize", () => {
     });
   }
 });
+
 burger.addEventListener("click", () => {
-  burger.src = "./resources/back.svg"
-    ? (burger.src = "./resources/burger.svg")
-    : (burger.src = "./resources/back.svg");
+  if (burgerFlag) {
+    burger.src = "./resources/lettuce.svg";
+    burgerFlag = false;
+  } else {
+    burger.src = "./resources/burger.svg";
+    burgerFlag = true;
+  }
   navDiv[0].classList.toggle("flex");
 
-  console.log(window.innerWidth);
   navLi.forEach(li => {
     li.classList.remove("hide");
     li.classList.toggle("show");
