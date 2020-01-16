@@ -83,16 +83,30 @@ nav div h4 {
   transition-duration: 0.3s;
 }
 #intro {
-  height: 68vh;
+  height: 88vh;
   padding-top: 6%;
   margin-bottom: 8%;
   background-color: moccasin;
+  overflow: hidden;
 }
-#intro h1 {
+#intro p {
+  position: relative;
+  padding-top: 20vh;
   margin-left: 20%;
-  font-size: 60px;
+}
+#intro p span {
+  position: relative;
+  font-size: 70px;
   color: crimson;
-  padding-top: 10vh;
+  margin-left: 4%;
+  transition-duration: 0.3s;
+}
+#underline {
+  position: relative;
+  left: 20%;
+  width: 100%;
+  height: 4px;
+  background-color: crimson;
 }
 section:nth-last-of-type(even) {
   background-color: rgba(255, 228, 181, 0.5);
@@ -115,6 +129,11 @@ section p {
   margin: 3%;
   width: 80%;
   max-width: 600px;
+}
+#drummingSection p:nth-of-type(2) {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 30px;
 }
 #codingSection {
   display: flex;
