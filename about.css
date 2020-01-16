@@ -83,7 +83,7 @@ nav div h4 {
   transition-duration: 0.3s;
 }
 #intro {
-  height: 88vh;
+  height: 128vh;
   padding-top: 6%;
   margin-bottom: 8%;
   background-color: moccasin;
@@ -91,20 +91,20 @@ nav div h4 {
 }
 #intro p {
   position: relative;
-  padding-top: 20vh;
-  margin-left: 20%;
+  padding-top: 30vh;
+  margin-left: 10%;
 }
 #intro p span {
   position: relative;
   font-size: 70px;
   color: crimson;
-  margin-left: 4%;
+  margin-left: 7%;
   transition-duration: 0.3s;
 }
 #underline {
   position: relative;
-  left: 20%;
-  width: 100%;
+  left: 40%;
+  width: 0;
   height: 4px;
   background-color: crimson;
 }
@@ -122,11 +122,20 @@ section p {
   width: 60%;
   margin: 7%;
 }
+.focusDiv {
+  background: rgb(153, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(153, 0, 0, 1) 62%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding: 3% auto 0.4% 0;
+}
 #drummingSection {
   margin-bottom: 19%;
 }
 #drummingSection img {
-  margin: 3%;
+  margin: 3% 0 1% 1%;
   width: 80%;
   max-width: 600px;
 }
@@ -172,4 +181,20 @@ footer ul {
   width: 100%;
   display: column;
   justify-content: center;
+}
+
+@media only screen and (max-width: 732px) {
+  nav div li {
+    display: none;
+  }
+  #burger {
+    cursor: pointer;
+    display: initial;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .container {
+    height: 250vh;
+  }
 }
