@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="./css/about.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"
       rel="stylesheet"
     />
     <link
@@ -21,7 +25,7 @@
         <h4 id="navh4"><a href="./about.html">Jonathan Cooper</a></h4>
         <li><a href="./index.html">home</a></li>
         <li><a href="./about.html" class="active">about me</a></li>
-        <li><a href="./resources/Resume.pdf" download>resume</a></li>
+        <li><a href="./resources/resume/Resume.pdf" download>resume</a></li>
         <li><a href="./portfolio.html">portfolio</a></li>
         <img
           id="burger"
@@ -82,34 +86,74 @@
           some of my work.
         </p>
       </div>
+
       <div id="carosel">
-        <img src="" alt="projects thumbnails" />
+        <p>Some of my recent Projects</p>
+        <a href="./portfolio.html">
+          <img
+            src="./resources/Project Thumbnails/hbs.png"
+            alt="projects thumbnails"
+          />
+        </a>
+        <a href="./portfolio.html">
+          <img
+            src="./resources/Project Thumbnails/notepad.png"
+            alt="projects thumbnails"
+          />
+        </a>
+
+        <a href="./portfolio.html">
+          <img
+            src="./resources/Project Thumbnails/pwdmanager.png"
+            alt="projects thumbnails"
+          />
+        </a>
+
+        <a href="./portfolio.html">
+          <img
+            src="./resources/Project Thumbnails/drumfinder.png"
+            alt="projects thumbnails"
+          />
+        </a>
       </div>
     </section>
     <section id="gamingSection">
       <h2>I'm a gamer too</h2>
       <p>
         Sometimes its nice to just relax and game out for a while. Until I start
-        yelling at my monitor, I have a great time. I'm mostly an FPS/RPG kind
+        yelling at my monitor, I have a great time! I'm mostly an FPS/RPG kind
         of guy (<a href="">Xbox One</a>).
       </p>
       <div id="xboxList" class="gamesList">
-        <img src="" alt="Call of Duty" />
-        <img src="" alt="Destiny" />
-        <img src="" alt="Fallout" />
-        <img src="" alt="Borderlands" />
+        <img src="./resources/games/callofduty.jpeg" alt="Call of Duty" />
+        <!-- <img src="./resources/games/destiny.jpg" alt="Destiny2" />
+        <img src="./resources/games/fallout.jpeg" alt="Fallout" />
+        <img src="./resources/games/borderlands.png" alt="Borderlands" /> -->
       </div>
 
       <p>
-        I also love some fun party games on the <a href="">Nintendo Switch</a>.
+        And I game out on some fun party games on the
+        <a href="">Nintendo Switch</a>. So much fun to get the family together
+        and play these!
       </p>
       <div id="switchList" class="gamesList">
-        <img src="" alt="super smash bros." />
-        <img src="" alt="tales of versperia" />
-        <img src="" alt="mario kart" />
-        <img src="" alt="mario party" />
+        <img src="./resources/games/ssb.jpg" alt="super smash bros." />
+        <!-- <img src="./resources/games/tales.jpg" alt="tales of versperia" />
+        <img src="./resources/games/mk.jpg" alt="mario kart" />
+        <img src="./resources/games/mp.jpg" alt="mario party" /> -->
       </div>
     </section>
+    <section id="outro">
+      <p>
+        I also <span>reeeeally</span> enjoy being married to my
+        <span>beauty-ful</span> wife and spending time with my family. And I'm a
+        strong believer in trying to be a <span>better person</span> each day,
+        mentally, spiritually and physically 😊. That pretty much sums it up!
+      </p>
+    </section>
+    <p id="finalLink">
+      Please check out my <a href="./portfolio.html">Projects</a> page next.
+    </p>
     <footer>
       <ul>
         <li>
@@ -154,6 +198,6 @@
         </li>
       </ul>
     </footer>
-    <script src="./about.js"></script>
+    <script src="./js/about.js"></script>
   </body>
 </html>

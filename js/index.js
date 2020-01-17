@@ -187,6 +187,8 @@ window.addEventListener("resize", () => {
       link.classList.remove("show");
       link.classList.add("hide");
     });
+    burger.src = "./resources/burger.svg";
+    burgerFlag = true;
   }
 });
 
