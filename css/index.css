@@ -61,6 +61,11 @@ nav div {
   overflow: hidden;
   align-items: center;
 }
+nav div h4 {
+  margin-right: 10%;
+  transition-duration: 0.3s;
+  padding-left: 10px;
+}
 nav div h4 a {
   color: moccasin;
 }
@@ -80,10 +85,6 @@ nav div li a:hover {
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   animation-play-state: running;
-}
-nav div h4 {
-  margin-right: 10%;
-  transition-duration: 0.3s;
 }
 .container {
   height: 200vh;
@@ -234,6 +235,10 @@ footer ul {
   #burger {
     cursor: pointer;
     display: initial;
+  }
+  nav div h4 {
+    align-self: flex-start;
+    padding: 20px;
   }
 }
 

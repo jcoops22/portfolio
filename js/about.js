@@ -13,7 +13,12 @@ const para = document.querySelector("#introHeader");
 const span1 = document.querySelectorAll("span")[0];
 const span2 = document.querySelectorAll("span")[1];
 const span3 = document.querySelectorAll("span")[2];
-const underline = document.querySelector("#underline");
+const xboxImgs = document.querySelectorAll("#xboxList img");
+const switchImgs = document.querySelectorAll("#switchList img");
+const caroselPics = document.querySelectorAll("#carosel img");
+const previewDiv = document.querySelector("#preview");
+const preview = document.querySelector("#preview img");
+var visisble = false;
 
 window.addEventListener("scroll", () => {
   if (window.innerWidth >= 832) {
@@ -38,7 +43,6 @@ window.addEventListener("scroll", () => {
       span3.style.right = "4%";
       span3.style.top = "490.4px";
     } else if (window.pageYOffset >= 820) {
-      // scrolled = true;
       scrolled ? (active.style.borderBottom = "3px solid crimson") : null;
       nav[0].style.position = "fixed";
       nav[0].style.opacity = 1;
@@ -87,11 +91,26 @@ burger.addEventListener("click", () => {
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 832) {
+    if (scrolled) {
+      console.log("we scrolled");
+      nav[0].style.background = "moccasin";
+    }
     navDiv[0].classList.contains("flex")
       ? navDiv[0].classList.remove("flex")
       : null;
     navLi.forEach(link => {
       link.classList.remove("hide");
+    });
+
+    xboxImgs.forEach((img, ind) => {
+      if (ind !== 0) {
+        img.style.display = "initial";
+      }
+    });
+    switchImgs.forEach((img, ind) => {
+      if (ind !== 0) {
+        img.style.display = "initial";
+      }
     });
   } else {
     scrolled ? (nav[0].style.position = "initial") : null;
@@ -114,5 +133,41 @@ window.addEventListener("resize", () => {
     });
     burger.src = "./resources/burger.svg";
     burgerFlag = true;
+
+    xboxImgs.forEach((img, ind) => {
+      if (ind !== 0) {
+        img.style.display = "none";
+      }
+    });
+    switchImgs.forEach((img, ind) => {
+      if (ind !== 0) {
+        img.style.display = "none";
+      }
+    });
   }
+});
+
+window.onload = function pictureCheck() {
+  if (window.innerWidth < 832) {
+    xboxImgs.forEach((img, ind) => {
+      if (ind !== 0) {
+        img.style.display = "none";
+      }
+    });
+    switchImgs.forEach((img, ind) => {
+      if (ind !== 0) {
+        img.style.display = "none";
+      }
+    });
+  }
+};
+console.log(preview);
+caroselPics.forEach(pic => {
+  pic.addEventListener("mouseover", e => {
+    previewDiv.style.opacity = 0.6;
+    preview.src = e.target.src;
+  });
+  pic.addEventListener("mouseout", () => {
+    previewDiv.style.opacity = 0;
+  });
 });

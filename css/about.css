@@ -48,7 +48,7 @@ nav {
   position: fixed;
   height: 60px;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
   font-size: 22px;
 }
 nav div {
@@ -57,6 +57,11 @@ nav div {
   height: 100%;
   overflow: hidden;
   align-items: center;
+}
+nav div h4 {
+  margin-right: 10%;
+  transition-duration: 0.3s;
+  padding-left: 10px;
 }
 nav div h4 a {
   color: moccasin;
@@ -77,10 +82,6 @@ nav div li a:hover {
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   animation-play-state: running;
-}
-nav div h4 {
-  margin-right: 10%;
-  transition-duration: 0.3s;
 }
 #intro {
   height: 128vh;
@@ -179,6 +180,8 @@ section p {
   align-self: center;
   /* background-color: rgba(153, 0, 0, 1); */
   background-color: #000;
+  position: relative;
+  z-index: 2;
 }
 #carosel p {
   font-family: "Indie Flower", cursive;
@@ -189,6 +192,19 @@ section p {
   font-size: 22px;
 }
 #carosel img {
+  width: 100%;
+}
+#preview {
+  position: absolute;
+  display: block;
+  left: 0;
+  margin-top: 20%;
+  transition-duration: 0.8s;
+  opacity: 0;
+  z-index: 1;
+}
+#preview img {
+  position: relative;
   width: 100%;
 }
 #gamingSection {
@@ -208,7 +224,7 @@ section p {
   width: 20%;
 }
 #switchList img {
-  width: 25%;
+  width: 20%;
 }
 #outro p {
   margin-left: 20%;
@@ -264,6 +280,10 @@ footer ul {
   #burger {
     cursor: pointer;
     display: initial;
+  }
+  nav div h4 {
+    align-self: flex-start;
+    padding: 20px;
   }
   #codingSection {
     display: flex;
