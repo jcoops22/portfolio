@@ -12,6 +12,9 @@ a {
 .active {
   border-bottom: 3px solid moccasin;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   height: 100%;
 }
@@ -41,10 +44,9 @@ nav div {
   align-items: center;
 }
 nav div h4 {
-  align-self: flex-start;
   margin-right: 10%;
-  padding-left: 20px;
   transition-duration: 0.3s;
+  padding-left: 10px;
 }
 nav div h4 a {
   color: moccasin;
@@ -70,29 +72,50 @@ nav div li a:hover {
   display: flex;
   justify-content: center;
   padding: 10%;
+  height: 88.2vh;
+}
+#scrollLabel {
+  position: absolute;
+  left: 63vw;
+  transition-duration: 0.8s;
+}
+#imga {
+  transform: rotate(-70deg);
+  width: 30px;
 }
 #frame {
   height: 300px;
-  border: 10px solid black;
+  border: 10px solid moccasin;
   border-radius: 50%;
   width: 300px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
   overflow-y: scroll;
+  background-color: rgb(220, 20, 60);
 }
 #frame::-webkit-scrollbar {
   display: none;
 }
-#frame h1 {
+#frameHeader {
   text-align: center;
   padding-bottom: 300px;
   margin-top: 300px;
+  color: moccasin;
+}
+#engaged {
+  position: relative;
+  opacity: 0;
+  color: #39ff14;
+  transition-duration: 0.6s;
+  bottom: 130px;
 }
 .container {
+  display: none;
   height: 100vh;
-  border: 1px solid black;
+  background-color: black;
 }
 footer {
   text-align: center;
