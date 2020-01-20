@@ -114,16 +114,38 @@ nav div li a:hover {
 }
 .container {
   display: none;
-  height: 100vh;
-  background-color: black;
-}
-footer {
+  /* height: 60vh; */
+  background-color: white;
   text-align: center;
-  padding: 20px;
-  background-color: moccasin;
 }
-footer ul {
+#previewDiv video {
+  height: 80vh;
   width: 100%;
-  display: column;
-  justify-content: center;
+  background-color: white;
+}
+.next,
+.prev {
+  position: relative;
+  width: 50px;
+  top: 65vh;
+  opacity: 0.5;
+  z-index: 3;
+}
+.next {
+  left: 45%;
+  transform: rotate(180deg);
+}
+.prev {
+  right: 45%;
+}
+.next:hover {
+  opacity: 1;
+}
+.prev:hover {
+  opacity: 1;
+}
+.description {
+  height: 10vh;
+  width: 60%;
+  margin: auto;
 }
