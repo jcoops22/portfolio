@@ -1,9 +1,12 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 * {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
   font-family: "Mansalva", cursive;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 a {
@@ -26,6 +29,8 @@ nav {
 }
 #burger {
   display: none;
+  -webkit-transition-duration: 1.5s;
+  -o-transition-duration: 1.5s;
   transition-duration: 1.5s;
 }
 .scrollNav {
@@ -37,14 +42,22 @@ nav {
   font-size: 22px;
 }
 nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   height: 100%;
   overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 nav div h4 {
   margin-right: 10%;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
   padding-left: 10px;
 }
@@ -57,19 +70,29 @@ nav div li {
   font-size: 26px;
 }
 nav div li a {
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
   padding-left: 8px;
   margin: 8px;
   color: moccasin;
 }
 nav div li a:hover {
+  -webkit-animation-name: jiggle;
   animation-name: jiggle;
+  -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
+  -webkit-animation-play-state: running;
   animation-play-state: running;
 }
 #headerDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 10%;
   height: 88.2vh;
@@ -77,9 +100,13 @@ nav div li a:hover {
 #scrollLabel {
   position: absolute;
   left: 63vw;
+  -webkit-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
   transition-duration: 0.8s;
 }
 #imga {
+  -webkit-transform: rotate(-70deg);
+  -ms-transform: rotate(-70deg);
   transform: rotate(-70deg);
   width: 30px;
 }
@@ -88,9 +115,18 @@ nav div li a:hover {
   border: 10px solid moccasin;
   border-radius: 50%;
   width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
   overflow-y: scroll;
@@ -109,6 +145,8 @@ nav div li a:hover {
   position: relative;
   opacity: 0;
   color: #39ff14;
+  -webkit-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
   transition-duration: 0.6s;
   bottom: 130px;
 }
@@ -133,6 +171,8 @@ nav div li a:hover {
 }
 .next {
   left: 45%;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .prev {

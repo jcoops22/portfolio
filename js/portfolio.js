@@ -30,7 +30,7 @@ var projects = [
   {
     vid: "./resources/Project Thumbnails/pwdsc.mov",
     desc:
-      "Password manager. Single page app buit to familiarize myself with building and using my own REST API. Uses MongoDB database and NodeJS backend. The rest is just HTMl CSS and Vanilla JS :)",
+      "Password manager. Single page app buit to familiarize myself with building and using my own REST API. Uses MongoDB database and NodeJS backend. The rest is just HTMl CSS and Vanilla JS",
     viewCode: "https://github.com/jcoops22/pwdManager",
     viewDemo: "https://github.com/jcoops22/pwdManager"
   },
@@ -67,8 +67,6 @@ frame.addEventListener("scroll", () => {
       reset();
     }, 1000);
   }
-
-  // frame.scrollTo(0, 0);
 });
 
 function reset() {
